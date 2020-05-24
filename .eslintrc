@@ -1,0 +1,6 @@
+{
+  "extends": "miszo",
+  "plugins": [
+    "smells"
+  ]
+}

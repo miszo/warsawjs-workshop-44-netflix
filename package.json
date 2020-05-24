@@ -1,29 +1,26 @@
 {
-    "private": true,
     "name": "warsawjs-workshop-44-netflix",
-    "description": "",
-    "version": "0.0.0",
-    "license": "MIT",
+    "version": "1.0.0",
+    "description": "warsawjs-workshop-44",
+    "main": "index.js",
+    "repository": "git@github.com:miszo/warsawjs-workshop-44.git",
     "author": {
-        "name": "Piotr Kowalski",
-        "email": "piecioshka@gmail.com",
-        "url": "https://piecioshka.pl/"
+      "name": "Miszo Radomski",
+      "email": "miszo.radomski@gmail.com"
     },
+    "license": "MIT",
+    "private": true,
     "scripts": {
-        "start": "cd src/ && http-server -c-1 -o .",
-        "lint": "eslint src/",
-        "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d src/"
+      "start": "cd src/ && http-server -c-1 -o .",
+      "lint": "eslint src/",
+      "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d src/"
     },
     "devDependencies": {
-        "cross-env": "^7.0.2",
-        "eslint": "^7.0.0",
-        "eslint-config-piecioshka": "^2.0.3",
-        "eslint-plugin-smells": "^1.0.1",
-        "gh-pages": "^2.2.0",
-        "http-server": "^0.12.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:piecioshka/warsawjs-workshop-44-netflix.git"
+      "cross-env": "7.0.2",
+      "eslint": "7.1.0",
+      "eslint-config-miszo": "2.2.3",
+      "eslint-plugin-smells": "1.0.1",
+      "http-server": "0.12.3",
+      "gh-pages": "2.2.0"
     }
-}
+  }
