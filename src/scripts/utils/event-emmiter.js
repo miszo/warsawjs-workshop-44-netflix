@@ -8,9 +8,9 @@ export class EventEmitter {
     this._listeners[name].push(callback);
   }
 
-  triggerEvent(name, agrs) {
+  triggerEvent(name, payload) {
     (this._listeners[name] || []).forEach((callback) => {
-      callback(agrs);
+      callback(payload);
     });
   }
 }
