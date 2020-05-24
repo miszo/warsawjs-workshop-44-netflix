@@ -1,40 +1,38 @@
 export class DefaultTheme {
-    constructor() {
-        this.$el = document.createElement('div');
-    }
-    createControls() {
-        const $controls = document.createElement('div');
-        $controls.classList.add('controls');
-        this.$el.appendChild($controls);
-        return this;
-    }
-    createProgress() {
-        const $progress = document.createElement('div');
-        $progress.classList.add('progress', 'mb-2', 'bg-white');
+  constructor() {
+    this.$element = document.createElement('div');
+    this.$element.classList.add('controls');
+  }
 
-        const $bar = document.createElement('div');
-        $bar.classList.add('progress-bar', 'bg-success');
+  createProgress() {
+    const $progress = document.createElement('div');
+    $progress.classList.add('progress', 'mb-5', 'bg-white');
 
-        $progress.appendChild($bar);
+    const $bar = document.createElement('div');
+    $bar.classList.add('progress-bar', 'bg-success');
 
-        this.$el.appendChild($progress);
-        return this;
-    }
-    addButton(name, label, cb) {
-        const $button = document.createElement('button');
-        $button.textContent = label;
-        $button.classList.add('btn', 'btn-primary', 'mr-2');
-        $button.addEventListener('click', cb);
-        this.$el.appendChild($button);
-        return this;
-    }
-    render($target) {
-        $target.appendChild(this.$el);
-        return this.$el;
-    }
+    $progress.appendChild($bar);
 
-    setProgress(progress) {
-        const $progress = this.$el.querySelector('.progress-bar');
-        $progress.style.width = `${progress}%`;
-    }
+    this.$element.appendChild($progress);
+    return this;
+  }
+
+  addButton(cssClass, label, callback) {
+    const $button = document.createElement('button');
+    $button.textContent = label;
+    $button.classList.add('btn', 'btn-primary', 'mr-2', cssClass);
+    $button.addEventListener('click', callback);
+    this.$element.appendChild($button);
+    return this;
+  }
+
+  render($target) {
+    $target.appendChild(this.$element);
+    return this.$element;
+  }
+
+  setProgress(progress) {
+    const $progress = this.$element.querySelector('.progress-bar');
+    $progress.style.width = `${progress}%`;
+  }
 }
