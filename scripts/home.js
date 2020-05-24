@@ -6,10 +6,7 @@ import './strategies/paid-strategy.js';
 import './strategies/default-strategy.js';
 
 function main() {
-  console.log('home page');
-
   const $target = document.querySelector('.video-list-container');
-
   VideoGenerator.generate(strategies, $target);
 }
 
