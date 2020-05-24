@@ -5,6 +5,7 @@
     "smells/no-switch": "off",
     "smells/no-complex-switch-case": "error",
     "smells/no-setinterval": "off",
-    "smells/no-this-assign": "error"
+    "smells/no-this-assign": "error",
+    "import/extensions": "off"
   }
 }
